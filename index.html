@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VW Passat B8 Alltrack | Oferta Sprzedaży</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Playfair Display (Szeryfowa - Premium) & Manrope (Bezszeryfowa - Nowoczesna) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Konfiguracja Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-black': '#0a0a0a',
+                        'brand-dark': '#121212',
+                        'brand-gray': '#1c1c1c',
+                        'brand-silver': '#a1a1aa',
+                        'brand-accent': '#e4e4e7', // Zinc-200
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles & Animations */
+        body {
+            background-color: #0a0a0a;
+            color: #e4e4e7;
+            overflow-x: hidden;
+        }
+
+        /* Smooth Scroll Behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Zoom Animation */
+        @keyframes slowZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+        .animate-zoom {
+            animation: slowZoom 20s infinite alternate linear;
+        }
+
+        /* Reveal on Scroll Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glass effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Image Hover Zoom */
+        .img-container {
+            overflow: hidden;
+        }
+        .img-container img {
+            transition: transform 0.7s ease;
+        }
+        .img-container:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Nawigacja -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 px-6 md:px-12 flex justify-between items-center mix-blend-difference text-white">
+        <div class="text-xl font-serif tracking-widest uppercase font-bold">Alltrack</div>
+        <div class="hidden md:flex gap-8 text-sm tracking-widest font-light uppercase">
+            <a href="#about" class="hover:text-brand-silver transition-colors">O samochodzie</a>
+            <a href="#gallery" class="hover:text-brand-silver transition-colors">Galeria</a>
+            <a href="#specs" class="hover:text-brand-silver transition-colors">Specyfikacja</a>
+            <a href="#contact" class="hover:text-brand-silver transition-colors">Kontakt</a>
+        </div>
+        <a href="#contact" class="border border-white/30 px-6 py-2 text-xs uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300 hidden md:inline-block">
+            Złóż ofertę
+        </a>
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-2xl">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+        <!-- Background Image with Zoom Effect -->
+        <div class="absolute inset-0 z-0">
+            <div class="w-full h-full animate-zoom">
+                <!-- Placeholder Image: High quality abstract car shot -->
+                <img src="https://images.unsplash.com/photo-1549520478-4395e2e8e9db?q=80&w=2070&auto=format&fit=crop" 
+                     alt="VW Passat Alltrack" 
+                     class="w-full h-full object-cover opacity-60">
+            </div>
+            <!-- Overlay Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-brand-black"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20">
+            <p class="text-brand-silver uppercase tracking-[0.3em] text-sm mb-4 reveal">Oferta Prywatna</p>
+            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-6 leading-tight reveal" style="transition-delay: 100ms;">
+                Volkswagen Passat <br> <span class="italic text-brand-silver">Alltrack</span>
+            </h1>
+            <p class="text-brand-silver font-light text-lg md:text-xl max-w-2xl mx-auto mb-10 reveal" style="transition-delay: 200ms;">
+                Doskonałość w każdej podróży. Komfort klasy biznes z duszą poszukiwacza przygód.
+            </p>
+            
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center reveal" style="transition-delay: 300ms;">
+                <div class="text-3xl font-serif text-white">65 900 PLN</div>
+                <div class="h-px w-12 bg-white/20 hidden md:block"></div>
+                <div class="flex gap-4">
+                    <a href="#contact" class="bg-white text-black px-8 py-3 uppercase tracking-widest text-xs font-bold hover:bg-brand-silver transition-colors">
+                        Zadzwoń
+                    </a>
+                    <a href="#gallery" class="border border-white/30 text-white px-8 py-3 uppercase tracking-widest text-xs font-bold hover:bg-white/10 transition-colors backdrop-blur-sm">
+                        Zobacz Galerię
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white/50 animate-bounce">
+            <i class="fa-solid fa-chevron-down text-xl"></i>
+        </div>
+    </header>
+
+    <!-- Intro / Story Section -->
+    <section id="about" class="py-24 md:py-32 bg-brand-black relative">
+        <div class="container mx-auto px-6 md:px-12">
+            <div class="flex flex-col md:flex-row gap-16 items-center">
+                <!-- Text Content -->
+                <div class="w-full md:w-1/2 reveal">
+                    <h2 class="font-serif text-3xl md:text-5xl mb-8 leading-snug text-white">
+                        Więcej niż kombi.<br>
+                        <span class="text-brand-silver italic">To styl życia.</span>
+                    </h2>
+                    <div class="space-y-6 text-brand-silver font-light leading-relaxed text-lg text-justify">
+                        <p>
+                            Prezentowany egzemplarz to kwintesencja uniwersalności. VW Passat Alltrack łączy w sobie elegancję limuzyny z dzielnością SUV-a. Samochód pochodzi z polskiego salonu i od nowości był użytkowany głównie na trasach szybkiego ruchu, co gwarantuje doskonałą kondycję podzespołów mechanicznych.
+                        </p>
+                        <p>
+                            Wnętrze zachowane w pedantycznym stanie, pachnące i wolne od uszkodzeń. Bogata konfiguracja sprawia, że każda podróż – czy to do biura, czy w góry – staje się czystą przyjemnością.
+                        </p>
+                        <div class="pt-6 border-l-2 border-brand-silver/30 pl-6 mt-6">
+                            <p class="text-white italic">"Samochód, który nie wymaga kompromisów. Gotowy na autostradę i bezdroża."</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Image Content -->
+                <div class="w-full md:w-1/2 reveal" style="transition-delay: 200ms;">
+                    <div class="relative">
+                        <div class="absolute -top-4 -left-4 w-full h-full border border-white/10 z-0"></div>
+                        <div class="img-container relative z-10 aspect-[4/5] md:aspect-square w-full">
+                            <!-- Placeholder: Interior Detail -->
+                            <img src="https://images.unsplash.com/photo-1542840843-3349799cded6?q=80&w=2070&auto=format&fit=crop" 
+                                 alt="Wnętrze Passat Alltrack" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Stats Banner -->
+    <section class="border-y border-white/5 bg-brand-dark py-12 reveal">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-2">
+                    <div class="text-brand-silver text-xs uppercase tracking-widest">Rocznik</div>
+                    <div class="text-3xl md:text-4xl font-serif text-white">2018</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-brand-silver text-xs uppercase tracking-widest">Silnik</div>
+                    <div class="text-3xl md:text-4xl font-serif text-white">2.0 TDI</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-brand-silver text-xs uppercase tracking-widest">Napęd</div>
+                    <div class="text-3xl md:text-4xl font-serif text-white">4Motion</div>
+                </div>
+                <div class="space-y-2">
+                    <div class="text-brand-silver text-xs uppercase tracking-widest">Przebieg</div>
+                    <div class="text-3xl md:text-4xl font-serif text-white">180k <span class="text-lg">km</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-brand-black">
+        <div class="container mx-auto px-6 md:px-12 mb-12 flex justify-between items-end reveal">
+            <div>
+                <span class="text-brand-silver uppercase tracking-widest text-xs block mb-2">Detale</span>
+                <h2 class="font-serif text-4xl text-white">Galeria Zdjęć</h2>
+            </div>
+            <div class="hidden md:block text-brand-silver text-sm">Kliknij, aby powiększyć</div>
+        </div>
+
+        <!-- Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+            <!-- Gallery Item 1 -->
+            <div class="group relative aspect-[4/3] overflow-hidden cursor-pointer reveal" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1626202167664-500e5728a5bb?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Front">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                    <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl"></i>
+                </div>
+            </div>
+            <!-- Gallery Item 2 -->
+            <div class="group relative aspect-[4/3] overflow-hidden cursor-pointer reveal" style="transition-delay: 100ms;" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Side Profile">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                     <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl"></i>
+                </div>
+            </div>
+            <!-- Gallery Item 3 -->
+            <div class="group relative aspect-[4/3] overflow-hidden cursor-pointer reveal" style="transition-delay: 200ms;" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Rear">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                     <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl"></i>
+                </div>
+            </div>
+            <!-- Gallery Item 4 -->
+            <div class="group relative aspect-[4/3] overflow-hidden cursor-pointer reveal" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1550983199-d4c5c24949a2?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Interior Dashboard">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                     <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl"></i>
+                </div>
+            </div>
+            <!-- Gallery Item 5 -->
+            <div class="group relative aspect-[4/3] overflow-hidden cursor-pointer reveal" style="transition-delay: 100ms;" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1594950269098-94444520e531?q=80&w=1964&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Leather Seats">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                     <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl"></i>
+                </div>
+            </div>
+            <!-- Gallery Item 6 -->
+            <div class="group relative aspect-[4/3] overflow-hidden cursor-pointer reveal" style="transition-delay: 200ms;" onclick="openLightbox(this)">
+                <img src="https://images.unsplash.com/photo-1549485123-281b37d45719?q=80&w=2071&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="Wheel Detail">
+                <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                     <i class="fa-solid fa-expand text-white opacity-0 group-hover:opacity-100 transition-opacity text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specs Section -->
+    <section id="specs" class="py-24 bg-brand-dark relative overflow-hidden">
+        <!-- Abstract Background Element -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 md:px-12 relative z-10">
+            <div class="max-w-3xl mb-16 reveal">
+                <span class="text-brand-silver uppercase tracking-widest text-xs block mb-2">Konfiguracja</span>
+                <h2 class="font-serif text-4xl text-white mb-6">Wyposażenie Premium</h2>
+                <p class="text-brand-silver font-light">Samochód został skonfigurowany z myślą o komforcie kierowcy i pasażerów. Poniżej wybrane elementy wyposażenia.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Spec Card 1 -->
+                <div class="glass p-8 hover:bg-white/5 transition-colors duration-300 reveal">
+                    <i class="fa-solid fa-couch text-3xl text-brand-silver mb-6"></i>
+                    <h3 class="text-xl text-white font-serif mb-3">Wnętrze</h3>
+                    <ul class="text-brand-silver space-y-2 text-sm font-light">
+                        <li>• Tapicerka skórzana Nappa</li>
+                        <li>• Fotele ErgoComfort z masażem</li>
+                        <li>• Oświetlenie Ambiente</li>
+                        <li>• Podgrzewane fotele (P+T)</li>
+                    </ul>
+                </div>
+                <!-- Spec Card 2 -->
+                <div class="glass p-8 hover:bg-white/5 transition-colors duration-300 reveal" style="transition-delay: 100ms;">
+                    <i class="fa-solid fa-microchip text-3xl text-brand-silver mb-6"></i>
+                    <h3 class="text-xl text-white font-serif mb-3">Technologia</h3>
+                    <ul class="text-brand-silver space-y-2 text-sm font-light">
+                        <li>• Wirtualny Kokpit (Active Info)</li>
+                        <li>• Nawigacja Discovery Pro</li>
+                        <li>• System Audio Dynaudio</li>
+                        <li>• Apple CarPlay / Android Auto</li>
+                    </ul>
+                </div>
+                <!-- Spec Card 3 -->
+                <div class="glass p-8 hover:bg-white/5 transition-colors duration-300 reveal" style="transition-delay: 200ms;">
+                    <i class="fa-solid fa-shield-halved text-3xl text-brand-silver mb-6"></i>
+                    <h3 class="text-xl text-white font-serif mb-3">Bezpieczeństwo</h3>
+                    <ul class="text-brand-silver space-y-2 text-sm font-light">
+                        <li>• Reflektory Top LED Matrix</li>
+                        <li>• Aktywny Tempomat ACC</li>
+                        <li>• Lane Assist & Side Assist</li>
+                        <li>• Kamera 360 stopni</li>
+                    </ul>
+                </div>
+                <!-- Spec Card 4 -->
+                <div class="glass p-8 hover:bg-white/5 transition-colors duration-300 reveal">
+                    <i class="fa-solid fa-mountain text-3xl text-brand-silver mb-6"></i>
+                    <h3 class="text-xl text-white font-serif mb-3">Pakiet Alltrack</h3>
+                    <ul class="text-brand-silver space-y-2 text-sm font-light">
+                        <li>• Napęd 4Motion (Haldex 5)</li>
+                        <li>• Zwiększony prześwit</li>
+                        <li>• Osłony podwozia</li>
+                        <li>• Tryb jazdy Offroad</li>
+                    </ul>
+                </div>
+                <!-- Spec Card 5 -->
+                <div class="glass p-8 hover:bg-white/5 transition-colors duration-300 reveal" style="transition-delay: 100ms;">
+                    <i class="fa-solid fa-gears text-3xl text-brand-silver mb-6"></i>
+                    <h3 class="text-xl text-white font-serif mb-3">Stan Techniczny</h3>
+                    <ul class="text-brand-silver space-y-2 text-sm font-light">
+                        <li>• Serwisowany w ASO</li>
+                        <li>• Świeżo po wymianie rozrządu</li>
+                        <li>• Nowe opony letnie</li>
+                        <li>• Bezwypadkowa historia</li>
+                    </ul>
+                </div>
+                 <!-- Spec Card 6 -->
+                 <div class="glass p-8 hover:bg-white/5 transition-colors duration-300 reveal" style="transition-delay: 200ms;">
+                    <i class="fa-solid fa-box-open text-3xl text-brand-silver mb-6"></i>
+                    <h3 class="text-xl text-white font-serif mb-3">Dodatki</h3>
+                    <ul class="text-brand-silver space-y-2 text-sm font-light">
+                        <li>• Elektryczny hak holowniczy</li>
+                        <li>• Komplet kół zimowych</li>
+                        <li>• Dywaniki gumowe i welurowe</li>
+                        <li>• Rolety w tylnych szybach</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & CTA -->
+    <section class="py-24 bg-brand-black border-t border-white/5">
+        <div class="container mx-auto px-6 text-center reveal">
+            <h2 class="font-serif text-3xl md:text-5xl text-white mb-4">Twój nowy towarzysz podróży</h2>
+            <p class="text-brand-silver mb-12 font-light">Samochód gotowy do jazdy, nie wymaga wkładu finansowego. Sprzedaż na podstawie Umowy Kupna-Sprzedaży.</p>
+            
+            <div class="inline-block relative mb-12">
+                <div class="text-6xl md:text-7xl font-serif text-white tracking-tighter">65 900 <span class="text-2xl text-brand-silver font-sans tracking-normal align-top mt-2 inline-block">PLN</span></div>
+                <div class="text-brand-silver text-sm mt-2 uppercase tracking-widest">Do negocjacji</div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                 <!-- Phone CTA -->
+                <a href="tel:+48000000000" class="group relative px-8 py-4 bg-white text-black overflow-hidden inline-flex items-center justify-center gap-3">
+                    <span class="relative z-10 uppercase tracking-widest font-bold text-sm">Zadzwoń teraz</span>
+                    <i class="fa-solid fa-phone relative z-10"></i>
+                    <div class="absolute inset-0 bg-brand-silver transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></div>
+                </a>
+                 <!-- Email CTA -->
+                <a href="mailto:kontakt@przyklad.pl" class="group relative px-8 py-4 border border-white/30 text-white overflow-hidden inline-flex items-center justify-center gap-3">
+                    <span class="relative z-10 uppercase tracking-widest font-bold text-sm">Napisz wiadomość</span>
+                    <i class="fa-regular fa-envelope relative z-10"></i>
+                    <div class="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out"></div>
+                    <span class="relative z-10 group-hover:text-black transition-colors duration-300"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="bg-black py-12 border-t border-white/10">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="text-left">
+                    <div class="font-serif text-2xl text-white mb-2">VW Alltrack</div>
+                    <p class="text-brand-silver text-sm">Prywatna oferta sprzedaży.</p>
+                </div>
+                
+                <div class="flex gap-8">
+                    <div class="text-center md:text-right">
+                        <div class="text-xs uppercase text-brand-silver tracking-widest mb-1">Telefon</div>
+                        <a href="tel:+48500600700" class="text-white text-lg hover:text-brand-silver transition-colors">+48 500 600 700</a>
+                    </div>
+                    <div class="text-center md:text-right">
+                        <div class="text-xs uppercase text-brand-silver tracking-widest mb-1">Lokalizacja</div>
+                        <span class="text-white text-lg">Warszawa, Mokotów</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 text-center text-white/20 text-xs">
+                &copy; 2024 Oferta prywatna. Wszystkie prawa do zdjęć zastrzeżone. Projekt strony pokazowy.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/95 hidden flex justify-center items-center opacity-0 transition-opacity duration-300 select-none">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-4xl hover:text-brand-silver focus:outline-none z-50">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        
+        <!-- Navigation Buttons -->
+        <button id="prev-btn" class="absolute left-4 md:left-8 text-white text-4xl hover:text-brand-silver focus:outline-none z-50 p-4" onclick="prevImage(event)">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button id="next-btn" class="absolute right-4 md:right-8 text-white text-4xl hover:text-brand-silver focus:outline-none z-50 p-4" onclick="nextImage(event)">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <img id="lightbox-img" src="" alt="Full screen" class="max-h-[90vh] max-w-[80vw] object-contain shadow-2xl transition-opacity duration-300">
+        <div class="absolute bottom-6 text-white/50 text-sm">Użyj strzałek lub kliknij, aby nawigować</div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // 1. Scroll Animations (Intersection Observer)
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Opcjonalnie: przestań obserwować po animacji
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.15, // Element musi być w 15% widoczny
+            rootMargin: "0px"
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // 2. Lightbox Logic
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        
+        // Collect all gallery images to allow navigation
+        // We select the images inside the grid in the gallery section
+        let galleryImages = [];
+        let currentIndex = 0;
+
+        function updateGalleryList() {
+            galleryImages = Array.from(document.querySelectorAll('#gallery .group img'));
+        }
+
+        function updateLightboxImage() {
+            const imgElement = galleryImages[currentIndex];
+            const imgSrc = imgElement.src;
+            // High res replacement
+            const highResSrc = imgSrc.replace('&w=2070', '&w=2800').replace('&w=1964', '&w=2800').replace('&w=2071', '&w=2800');
+            
+            // Fade out, change src, fade in
+            lightboxImg.style.opacity = '0';
+            setTimeout(() => {
+                lightboxImg.src = highResSrc;
+                lightboxImg.onload = () => {
+                    lightboxImg.style.opacity = '1';
+                };
+            }, 150);
+        }
+
+        function openLightbox(element) {
+            updateGalleryList(); // Ensure list is fresh
+            const clickedImg = element.querySelector('img');
+            // Find index of clicked image
+            currentIndex = galleryImages.indexOf(clickedImg);
+            
+            updateLightboxImage();
+            
+            lightbox.classList.remove('hidden');
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+            }, 10);
+            document.body.style.overflow = 'hidden'; // Disable scroll
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('opacity-0');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightboxImg.src = '';
+            }, 300); // Match transition duration
+            document.body.style.overflow = 'auto'; // Enable scroll
+        }
+
+        function nextImage(event) {
+            if(event) event.stopPropagation(); // Prevent closing lightbox
+            currentIndex = (currentIndex + 1) % galleryImages.length;
+            updateLightboxImage();
+        }
+
+        function prevImage(event) {
+            if(event) event.stopPropagation(); // Prevent closing lightbox
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            updateLightboxImage();
+        }
+
+        // Close lightbox on click outside image (background)
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.classList.contains('hidden')) return;
+
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowRight') {
+                nextImage();
+            } else if (e.key === 'ArrowLeft') {
+                prevImage();
+            }
+        });
+
+        // 3. Navbar background on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/80', 'backdrop-blur-md', 'py-4');
+                navbar.classList.remove('py-6');
+            } else {
+                navbar.classList.remove('bg-black/80', 'backdrop-blur-md', 'py-4');
+                navbar.classList.add('py-6');
+            }
+        });
+    </script>
+</body>
+</html>
